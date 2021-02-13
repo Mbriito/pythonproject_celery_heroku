@@ -13,6 +13,21 @@ https://docs.djangoproject.com/en/2.0/ref/settings/
 import os
 #from sentry_sdk.integrations.celery import CeleryIntegral
 
+# CELERY STUFF
+CELERY_BROKER_URL = 'amqp: // convidado: convidado @ localhost'
+#BROKER_URL = 'redis://localhost:6379'
+#CELERY_RESULT_BACKEND = 'redis://localhost:6379'
+CELERY_RESULT_BACKEND = 'db + sqlite: ///result.sqlite'
+CELERY_ACCEPT_CONTENT = ['application/json']
+CELERY_TASK_SERIALIZER = 'json'
+CELERY_RESULT_SERIALIZER = 'json'
+CELERY_TIMEZONE = 'Africa/Nairobi'
+CELERY_TASK_TRACK_STARTED = True
+CELERY_TASK_TIME_LIMIT =30 * 60
+
+
+
+
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
@@ -38,6 +53,7 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'demoapp', 
 ]
 
 MIDDLEWARE = [
@@ -120,10 +136,3 @@ USE_TZ = True
 
 STATIC_URL = '/static/'
 
-# CELERY STUFF
-BROKER_URL = 'redis://localhost:6379'
-CELERY_RESULT_BACKEND = 'redis://localhost:6379'
-CELERY_ACCEPT_CONTENT = ['application/json']
-CELERY_TASK_SERIALIZER = 'json'
-CELERY_RESULT_SERIALIZER = 'json'
-CELERY_TIMEZONE = 'Africa/Nairobi'
