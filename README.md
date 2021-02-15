@@ -3,7 +3,7 @@ Projto django implementado com celery e deploy no heroku-baseado no pythonpro - 
 Example Django project using Celery
 pythonpro/celery.py
 
-#pythonpro/
+<h2>#pythonpro/</h2>
 This is a project in itself, created using django-admin.py startproject pythonpro, and then the settings module (pythonpro/settings.py) was modified to add appdemo to INSTALLED_APPS
 
 proj/celery.py
