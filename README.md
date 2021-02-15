@@ -4,9 +4,9 @@ Example Django project using Celery
 pythonpro/celery.py
 
 <h2>#pythonpro/</h2>
-This is a project in itself, created using django-admin.py startproject pythonpro, and then the settings module (pythonpro/settings.py) was modified to add appdemo to INSTALLED_APPS
+This is a project in itself, created using<span style="background-color: #FFFF00">django-admin.py startproject pythonpro</span>, and then the settings module (<span style="background-color: #FFFF00">pythonpro/settings.py</span>) was modified to add appdemo to INSTALLED_APPS
 
-proj/celery.py
+<h2>pythonpro/celery.py</h2>
 This module contains the Celery application instance for this project, we take configuration from Django settings and use autodiscover_tasks to find task modules inside all packages listed in INSTALLED_APPS.
 
 appdemo/
